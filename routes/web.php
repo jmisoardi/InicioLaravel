@@ -34,7 +34,7 @@ Route::get('/posts/create', [PostController::class, 'create']);
 });
 */
 //Utilizar las rutas de esta manera es más eficiente y organizado, ya que nos permite separar la lógica de la aplicación en controladores, lo que facilita el mantenimiento y la escalabilidad del código. Además, al usar controladores, podemos reutilizar métodos y lógica en diferentes rutas, lo que mejora la eficiencia del desarrollo.
-Route::get('/posts/{vista}', [PostController::class, 'show']);
+Route::get('/posts/{vista?}', [PostController::class, 'show']);
 
 
 /*Route::get('/posts/{post}', function($post){
