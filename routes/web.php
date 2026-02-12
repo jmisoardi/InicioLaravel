@@ -25,6 +25,7 @@ use App\Http\Controllers\PostController;
 
 //Utilizamos Controladores para manejar las rutas ,HomeController y PostController, mas limpio el código.
 Route:: get('/', [HomeController::class, 'index']);
+Route:: get('/welcome', [HomeController::class, 'welcome']);
 Route:: get('/posts', [PostController::class, 'index']);
 Route::get('/posts/create', [PostController::class, 'create']);
 Route::get('/posts/show/{vista?}', [PostController::class, 'show']);
