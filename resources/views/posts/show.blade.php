@@ -10,8 +10,10 @@
      <h1>"Estamos mostrando el Post solicitado, usando el método Show "<?=$vista?>" o tambien podemos 
             usar "{{ $vista }}" del PostController"            
     </h1>
+    <br>
+    <br>
        @isset ($vista)
-           <p>Este es el contenido del Post: {{ $vista }} </p>
+           <h1>Este es el contenido del Post: {{ $vista }} </h1>
        @else
            <p>No se ha proporcionado ningún Post específico.</p>
        @endif

@@ -27,6 +27,7 @@ use App\Http\Controllers\PostController;
 Route:: get('/', [HomeController::class, 'index']);
 Route:: get('/posts', [PostController::class, 'index']);
 Route::get('/posts/create', [PostController::class, 'create']);
+Route::get('/posts/show/{vista?}', [PostController::class, 'show']);
 
 //Esta es ua ruta de tipo GET que retorna un texto simple 
 /*Route:: get('/posts/create', function(){
@@ -34,7 +35,7 @@ Route::get('/posts/create', [PostController::class, 'create']);
 });
 */
 //Utilizar las rutas de esta manera es más eficiente y organizado, ya que nos permite separar la lógica de la aplicación en controladores, lo que facilita el mantenimiento y la escalabilidad del código. Además, al usar controladores, podemos reutilizar métodos y lógica en diferentes rutas, lo que mejora la eficiencia del desarrollo.
-Route::get('/posts/{vista?}', [PostController::class, 'show']);
+//Route::get('/posts/{vista?}', [PostController::class, 'show']);
 
 
 /*Route::get('/posts/{post}', function($post){
@@ -57,9 +58,9 @@ Route::get('/posts/post-3',function(){
 });
 
 //Podemos trabajar rutas con parámetros dinámicos, una solo ruta para varios (articulos o posts)
-Route::get('/posts/{post}', function($post){
+/* Route::get('/posts/{post}', function($post){
     return "Aqui se mostrará el Post: $post";
-});
+}); */
 
 //Podemos trabajar con rutas pero con parámetros opcionales para esto usamos el símbolo "?"
 Route::get('/usuario/{nombre?}', function($nombre=null){
